@@ -769,15 +769,13 @@ p {
 					</div>
                 </div>
 				
-				<div class="form-group">
+		<div class="form-group">
                     <div class="col-sm-2"> <label><a>Final Mark</a></label></div>
                     <div class="col-sm-2">
-                     
                            <input type="text"  name="tb11" id="tb11" readonly="true"/>
                     </div>
                 </div>
-				
-				
+						
                 <div class="form-group">
                     <label class="col-sm-3 control-label">Documents Attached relevant to the Articles 30 of the Constitution</label>
                     <div class="col-sm-6">
@@ -794,7 +792,8 @@ p {
                         <div class="checkbox">
                             <label>
                                 <input type="checkbox" name="agree" value="agree"/> 
-								 I hereby certify that the particulars submitted by me in this application are true and accurate.  I am aware that if any of these particulars are found to be false or inaccurate, I am liable to be disqualified before allocation for accommodation and to be vacated the accommodation by giving 01 (One) month notice if the inaccuracy is detected after appointment. Further, I noted that the last statement of the Article 33 will be imposed if I fail to vacate the accommodation assuming that the tenure is expired at the date of notice given by the SUSL.
+				I hereby certify that the particulars submitted by me in this application are true and accurate. 
+				I am aware that if any of these particulars are found to be false or inaccurate, I am liable to be disqualified before allocation for accommodation and to be vacated the accommodation by giving 01 (One) month notice if the inaccuracy is detected after appointment. Further, I noted that the last statement of the Article 33 will be imposed if I fail to vacate the accommodation assuming that the tenure is expired at the date of notice given by the SUSL.
                             </label>
                         </div>
                     </div>
