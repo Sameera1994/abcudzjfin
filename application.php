@@ -58,14 +58,11 @@ p {
 </head>
 
 <body>
-  
-
-    <div class="container">
+      <div class="container">
     <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
             <div class="page-header">
                 <hr>
-
                 <h3>Instructions</h3>
 
                 <p>
