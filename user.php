@@ -1,10 +1,7 @@
- 
-
-<!DOCTYPE html>
-
+ <!DOCTYPE html>
 <html>
-    <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <title>Login</title>
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"></script>  
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
@@ -12,7 +9,7 @@
   <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css"/>
   <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/js/bootstrapValidator.min.js"> </script>
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/formValidation.css"/>
+  <link rel="stylesheet" href="css/formValidation.css"/>
 
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
@@ -37,7 +34,6 @@ form {
     background-color: white;
     text-align: center;
     border-radius: 25px;
-    
 }
 </style>
 </head>
