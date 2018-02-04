@@ -1,8 +1,5 @@
-
 <html>
-	<head>
-
-		<head>
+  <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <title>Login</title>
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"></script>  
@@ -85,8 +82,7 @@ $(document).ready(function() {
     });
 });
 </script>
-
-
+	
 </body>
 </html>
 
