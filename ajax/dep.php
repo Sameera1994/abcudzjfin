@@ -14,14 +14,15 @@ $nu=mysqli_num_rows($result1);
 
 //echo $nu;
 if($nu>0){
-//echo "<select name='Desig' id='Desig'class='btn btn-primary dropdown-toggle' type='button' data-toggle='dropdown' onchange='myfunction1()'>";
-echo "<option>--Select Department--</option>";
-while($row = mysqli_fetch_assoc($result1)) {
-echo "<option value='$row[dep_name]'>$row[dep_name]</option>";
-}
+  //echo "<select name='Desig' id='Desig'class='btn btn-primary dropdown-toggle' type='button' data-toggle='dropdown' onchange='myfunction1()'>";
+  echo "<option>--Select Department--</option>";
+  while($row = mysqli_fetch_assoc($result1)) {
+    echo "<option value='$row[dep_name]'>$row[dep_name]</option>";
+  }
 //echo "</select>";
-}else{
-echo "error";
+}
+else{
+  echo "error";
 }
 
 ?>
