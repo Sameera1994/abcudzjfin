@@ -22,26 +22,28 @@ $enc_password=md5($_POST['pwd']);
 
 $sql=mysqli_query($conn, "SELECT * FROM user_verify WHERE UPF='$_POST[upfno]' AND UID='$_POST[nic]'");
 $num_rows=mysqli_num_rows($sql);
-if($num_rows > 0){
-$ses_sql = mysqli_query($conn,"UPDATE `user_verify` SET `password`='$enc_password' WHERE UPF='$_POST[upfno]' ") ;
+	
+  if($num_rows > 0){
+    $ses_sql = mysqli_query($conn,"UPDATE `user_verify` SET `password`='$enc_password' WHERE UPF='$_POST[upfno]' ") ;
 
-//$num_rows = mysqli_num_rows($ses_sql);
+   //$num_rows = mysqli_num_rows($ses_sql);
+   //$ses_sql1 = mysqli_query($conn,"SELECT* FROM users where nic = '$_POST[AdID]' && password='$_POST[Adpw]'; ") ;
 
-//$ses_sql1 = mysqli_query($conn,"SELECT* FROM users where nic = '$_POST[AdID]' && password='$_POST[Adpw]'; ") ;
-
-//$num_rows1 = mysqli_num_rows($ses_sql1);
-$_SESSION['NIC']=$_POST['upfno'];
-mysqli_close($conn);
-header("Location: application.php");
+   //$num_rows1 = mysqli_num_rows($ses_sql1);
+   $_SESSION['NIC']=$_POST['upfno'];
+   mysqli_close($conn);
+   header("Location: application.php");
+  }
+  else {
+      echo "<h2 align= 'center'>"."Invalid User!"."</h2>";
+      echo "<a href='admin.php'>"."<<..back"."</a>";
+  }
+	
 }
-else{
-echo "<h2 align= 'center'>"."Invalid User!"."</h2>";
- echo "<a href='admin.php'>"."<<..back"."</a>";
-
-}
-}else{
-echo "<h2 align= 'center'>"."Unmatching password!"."</h2>";
- echo "<a href='admin.php'>"."<<..back"."</a>";
+	   
+else {
+	echo "<h2 align= 'center'>"."Unmatching password!"."</h2>";
+ 	echo "<a href='admin.php'>"."<<..back"."</a>";
 }
 //if ($num_rows==1) {
    // $_SESSION['NIC']=$_POST['upfno'];
@@ -51,11 +53,6 @@ echo "<h2 align= 'center'>"."Unmatching password!"."</h2>";
 	//else{
      // echo "<h2 align= 'center'>"."Wrong ID and Password!"."</h2>";
        // echo "<a href='admin.php'>"."<<..back"."</a>";
-  //  }
-    
-
-
-        
-    
+  //  }   
 }
-   ?>
+?>
