@@ -22,8 +22,6 @@ if (!$conn) {
 echo "Connected successfully";
 */
 
-
-
 if(empty($_POST['UID'])||empty($_POST['Upw']))
    {
   echo "<h2 align= 'center'>"."Please Provide ID and Password!"."</h2>";
@@ -47,9 +45,5 @@ if ($num_rows==1) {
         echo "<a href='user.html'>"."<<..back"."</a>";
     }
 }
-   
-    
-   
 
-   
 ?>
