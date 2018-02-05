@@ -819,14 +819,13 @@ p {
                 	</tr>
                 	<tr>
                 		<td><b>Distance</b></td>
-                		<td>
-                           <input type="text"  name="tb3" id="tb3" readonly="true"/></td>
+                		<td><input type="text"  name="tbl3" id="tbl3" readonly="true"/></td>
                 		<td></td>
                 		<td></td>
                 	</tr>
                 	<tr>
                 		<td><b>Service</b></td>
-                		<td><input type="text"  name="tb5" id="tb5"  readonly="true"/></td>
+                		<td><input type="text"  name="tb15" id="tb15"  readonly="true"/></td>
                 		<td></td>
                 		<td></td>
                 	</tr>
