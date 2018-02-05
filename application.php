@@ -661,12 +661,7 @@ p {
                                 <input type="radio" name="agree"  value="False" /> No
                             </label>
                         </div>
-                    </div>
-                        
-                            
-                                
-                            
-                        
+                    </div>    
                     </div>
                 
                 <label >For SUSL employers only </label><br><br>
@@ -813,27 +808,27 @@ p {
                 	</tr>
                 	<tr>
                 		<td><b>Designation</b></td>
-                		<td><input type="text"  name="tb4" id="tb4" readonly="true"/></td>
-                		<td><input type="text"  name="" id="" readonly="true"/></td>
+                		<td><input type="text"  name="tb24" id="tb24" readonly="true"/></td>
+                		<td><input type="text"  name="tb25" id="tb25" readonly="true"/></td>
                 		<td><input type="text"  name="tb21" id="tb21" readonly="true"/></td>
                 	</tr>
                 	<tr>
                 		<td><b>Distance</b></td>
                 		<td><input type="text"  name="tbl3" id="tbl3" readonly="true"/></td>
                 		<td><input type="text"  name="" placeholder="0.00" id="" readonly="true"/></td>
-                		<td><input type="text"  name="" id="" readonly="true"/></td>
+                		<td><input type="text"  name="tb13" id="tb13" readonly="true"/></td>
                 	</tr>
                 	<tr>
                 		<td><b>Service</b></td>
                 		<td><input type="text"  name="tb15" id="tb15"  readonly="true"/></td>
                 		<td><input type="text"  name="tb100" id="tb100"  readonly="true"/></td>
-                		<td><input type="text"  name="" id="" readonly="true"/></td>
+                		<td><input type="text"  name="tb22" id="tb22" readonly="true"/></td>
                 	</tr>
                 	<tr>
                 		<td><b>Duties</b></td>
-                		<td><input type="text"  name="" id="" readonly="true"/></td>
-                		<td><input type="text"  name="" id="" readonly="true"/></td>
-                		<td><input type="text"  name="" id="" readonly="true"/></td>
+                		<td><input type="text"  name="tb23" id="tb23" readonly="true"/></td>
+                		<td><input type="text"  name="" id="" placeholder ="0.00" readonly="true"/></td>
+                		<td><input type="text"  name="tb23" id="tb23" readonly="true"/></td>
                 	</tr>
                 </table>
 
