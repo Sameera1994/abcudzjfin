@@ -47,7 +47,8 @@ marks_for_exp=parseFloat(exp_marks)+parseFloat(exp_marks_spouce);
 if(marks_for_exp > 20){
 	marks_for_exp=20;
 }
-
+document.getElementById('tb22').value=Number(marks_for_exp).toFixed(2);
+	
 marks_for_contri=count*2;
 if(marks_for_contri>10){
 	marks_for_contri=10;
