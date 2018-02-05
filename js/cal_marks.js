@@ -40,6 +40,8 @@ marks_for_desig=parseFloat(desig_marks)+parseFloat(desig_marks_spouce);
 if(marks_for_desig>50){
 	marks_for_desig=50;
 }
+document.getElementById('tb24').value=Number(desig_marks).toFixed(2);
+document.getElementById('tb25').value=Number(desig_marks_spouce).toFixed(2);
 document.getElementById('tb21').value=Number(marks_for_desig).toFixed(2);
  
 //caculate experience marks of both....................... 
@@ -48,11 +50,11 @@ if(marks_for_exp > 20){
 	marks_for_exp=20;
 }
 document.getElementById('tb22').value=Number(marks_for_exp).toFixed(2);
-	
 marks_for_contri=count*2;
 if(marks_for_contri>10){
 	marks_for_contri=10;
 }
+document.getElementById('tb23').value=Number(marks_for_contri).toFixed(2);
 
 //full marks of applicant only....................................................
 marks1=parseFloat(desig_marks)+parseFloat(exp_marks)+parseFloat(dist_marks)+parseFloat(marks_for_contri);
