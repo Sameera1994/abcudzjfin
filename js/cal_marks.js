@@ -40,6 +40,7 @@ marks_for_desig=parseFloat(desig_marks)+parseFloat(desig_marks_spouce);
 if(marks_for_desig>50){
 	marks_for_desig=50;
 }
+document.getElementById('tb21').value=Number(marks_for_desig).toFixed(2);
  
 //caculate experience marks of both....................... 
 marks_for_exp=parseFloat(exp_marks)+parseFloat(exp_marks_spouce);
