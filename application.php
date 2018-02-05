@@ -826,7 +826,7 @@ p {
                 	<tr>
                 		<td><b>Service</b></td>
                 		<td><input type="text"  name="tb15" id="tb15"  readonly="true"/></td>
-                		<td></td>
+                		<td><input type="text"  name="tb100" id="tb100"  readonly="true"/></td>
                 		<td></td>
                 	</tr>
                 	<tr>
