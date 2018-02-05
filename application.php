@@ -813,27 +813,27 @@ p {
                 	</tr>
                 	<tr>
                 		<td><b>Designation</b></td>
-                		<td></td>
-                		<td></td>
-                		<td></td>
+                		<td><input type="text"  name="tb4" id="tb4" readonly="true"/></td>
+                		<td><input type="text"  name="" id="" readonly="true"/></td>
+                		<td><input type="text"  name="tb21" id="tb21" readonly="true"/></td>
                 	</tr>
                 	<tr>
                 		<td><b>Distance</b></td>
                 		<td><input type="text"  name="tbl3" id="tbl3" readonly="true"/></td>
-                		<td></td>
-                		<td></td>
+                		<td><input type="text"  name="" placeholder="0.00" id="" readonly="true"/></td>
+                		<td><input type="text"  name="" id="" readonly="true"/></td>
                 	</tr>
                 	<tr>
                 		<td><b>Service</b></td>
                 		<td><input type="text"  name="tb15" id="tb15"  readonly="true"/></td>
                 		<td><input type="text"  name="tb100" id="tb100"  readonly="true"/></td>
-                		<td></td>
+                		<td><input type="text"  name="" id="" readonly="true"/></td>
                 	</tr>
                 	<tr>
                 		<td><b>Duties</b></td>
-                		<td></td>
-                		<td></td>
-                		<td></td>
+                		<td><input type="text"  name="" id="" readonly="true"/></td>
+                		<td><input type="text"  name="" id="" readonly="true"/></td>
+                		<td><input type="text"  name="" id="" readonly="true"/></td>
                 	</tr>
                 </table>
 
