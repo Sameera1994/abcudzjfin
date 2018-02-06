@@ -460,98 +460,70 @@ p {
                     </div>-->
                 </div>
                 <label><font size=4>Current Additional Duties:</font></label>
-				<div class="from-group">
-				<select name="Pacc" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" onchange=''>
-					<option value="">--Past Accomadation--</option>   
-					<option value="Head of the Department">Head of the Department</option>
-					<option value="Directors of Centers">Directors of Centers</option>
-					<option value="Coordinator appointed by VC">Coordinator appointed by VC</option>
-					<option value="Senior Student Counselor">Senior Student Counselor</option>
-					<option value="Deputy Senior Student Counselor">Deputy Senior Student Counselor</option>
-					<option value="University medical officer">University medical officer</option>
-					<option value="Academic warden">Academic warden</option>
-					<option value="Chairman of University level committee">Chairman of University level committee</option>
-					<option value="President/Secretary/Treasurer of Welfare Society SUSL">President/Secretary/Treasurer of Welfare Society SUSL,SUTA,UEOA,CUTTA
-                     Staff Trade Union of the Sabaragamuwa university of Sri Lanka</option>
-					<option value="Member of MPC">Member of MPC</option>
-				</select>
-				</div>
-				<div class="from-group">
-				<select name="Pacc" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" onchange=''>
-					<option value="">--Past Accomadation--</option>   
-					<option value="Head of the Department">Head of the Department</option>
-					<option value="Directors of Centers">Directors of Centers</option>
-					<option value="Coordinator appointed by VC">Coordinator appointed by VC</option>
-					<option value="Senior Student Counselor">Senior Student Counselor</option>
-					<option value="Deputy Senior Student Counselor">Deputy Senior Student Counselor</option>
-					<option value="University medical officer">University medical officer</option>
-					<option value="Academic warden">Academic warden</option>
-					<option value="Chairman of University level committee">Chairman of University level committee</option>
-					<option value="President/Secretary/Treasurer of Welfare Society SUSL">President/Secretary/Treasurer of Welfare Society SUSL</option>
-					<option value="SUTA">SUTA</option>
-					<option value="UEOA">UEOA</option>
-					<option value="CUTTA">CUTTA</option>
-					<option value="Staff Trade Union of the Sabaragamuwa university of Sri Lanka">Staff Trade Union of the Sabaragamuwa university of Sri Lanka</option>
-					<option value="Member of MPC">Member of MPC</option>
-				</select>
-				</div>
-				<div class="from-group">
-				<select name="Pacc" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" onchange=''>
-					<option value="">--Past Accomadation--</option>   
-					<option value="Head of the Department">Head of the Department</option>
-					<option value="Directors of Centers">Directors of Centers</option>
-					<option value="Coordinator appointed by VC">Coordinator appointed by VC</option>
-					<option value="Senior Student Counselor">Senior Student Counselor</option>
-					<option value="Deputy Senior Student Counselor">Deputy Senior Student Counselor</option>
-					<option value="University medical officer">University medical officer</option>
-					<option value="Academic warden">Academic warden</option>
-					<option value="Chairman of University level committee">Chairman of University level committee</option>
-					<option value="President/Secretary/Treasurer of Welfare Society SUSL">President/Secretary/Treasurer of Welfare Society SUSL</option>
-					<option value="SUTA">SUTA</option>
-					<option value="UEOA">UEOA</option>
-					<option value="CUTTA">CUTTA</option>
-					<option value="Staff Trade Union of the Sabaragamuwa university of Sri Lanka">Staff Trade Union of the Sabaragamuwa university of Sri Lanka</option>
-					<option value="Member of MPC">Member of MPC</option>
-				</select>
-				</div>
-				<div class="from-group">
-				<select name="Pacc" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" onchange=''>
-					<option value="">--Past Accomadation--</option>   
-					<option value="Head of the Department">Head of the Department</option>
-					<option value="Directors of Centers">Directors of Centers</option>
-					<option value="Coordinator appointed by VC">Coordinator appointed by VC</option>
-					<option value="Senior Student Counselor">Senior Student Counselor</option>
-					<option value="Deputy Senior Student Counselor">Deputy Senior Student Counselor</option>
-					<option value="University medical officer">University medical officer</option>
-					<option value="Academic warden">Academic warden</option>
-					<option value="Chairman of University level committee">Chairman of University level committee</option>
-					<option value="President/Secretary/Treasurer of Welfare Society SUSL">President/Secretary/Treasurer of Welfare Society SUSL</option>
-					<option value="SUTA">SUTA</option>
-					<option value="UEOA">UEOA</option>
-					<option value="CUTTA">CUTTA</option>
-					<option value="Staff Trade Union of the Sabaragamuwa university of Sri Lanka">Staff Trade Union of the Sabaragamuwa university of Sri Lanka</option>
-					<option value="Member of MPC">Member of MPC</option>
-				</select>
-				</div>
-				<div class="from-group">
-				<select name="Pacc" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" onchange=''>
-					<option value="">--Past Accomadation--</option>   
-					<option value="Head of the Department">Head of the Department</option>
-					<option value="Directors of Centers">Directors of Centers</option>
-					<option value="Coordinator appointed by VC">Coordinator appointed by VC</option>
-					<option value="Senior Student Counselor">Senior Student Counselor</option>
-					<option value="Deputy Senior Student Counselor">Deputy Senior Student Counselor</option>
-					<option value="University medical officer">University medical officer</option>
-					<option value="Academic warden">Academic warden</option>
-					<option value="Chairman of University level committee">Chairman of University level committee</option>
-					<option value="President/Secretary/Treasurer of Welfare Society SUSL">President/Secretary/Treasurer of Welfare Society SUSL</option>
-					<option value="SUTA">SUTA</option>
-					<option value="UEOA">UEOA</option>
-					<option value="CUTTA">CUTTA</option>
-					<option value="Staff Trade Union of the Sabaragamuwa university of Sri Lanka">Staff Trade Union of the Sabaragamuwa university of Sri Lanka</option>
-					<option value="Member of MPC">Member of MPC</option>
-				</select>
-				</div>
+		<div class="form-group">
+                        <div class="checkbox">
+                            <label class="checkbox-inline no_indent">
+                                <input id="houseid16" name="Con2[]" type="checkbox" value="Head of the Department" onchange="myfunction5('houseid16')">
+                                Head of the Department
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label class="checkbox-inline no_indent">
+                                <input  id="houseid20" name="Con2[]" type="checkbox" value="Directors of Centers" onchange="myfunction5('houseid20')">
+                               Directors of Centers
+                            </label>
+                        </div>
+			<div class="checkbox">
+                            <label class="checkbox-inline no_indent">
+                                <input  id="houseid21" name="Con2[]" type="checkbox" value="Coordinator appointed by VC" onchange="myfunction5('houseid21')">
+                               Coordinator appointed by VC
+                            </label>
+                        </div>
+			<div class="checkbox">
+                            <label class="checkbox-inline no_indent">
+                                <input  id="houseid22" name="Con2[]" type="checkbox" value="Senior Student Counselor" onchange="myfunction5('houseid22')">
+                               Senior Student Counselor
+                            </label>
+                        </div>
+			<div class="checkbox">
+                            <label class="checkbox-inline no_indent">
+                                <input  id="houseid23" name="Con2[]" type="checkbox" value="Deputy Senior Student Counselor" onchange="myfunction5('houseid23')">
+                               Deputy Senior Student Counselor
+                            </label>
+                        </div>
+			<div class="checkbox">
+                            <label class="checkbox-inline no_indent">
+                                <input  id="houseid24" name="Con2[]" type="checkbox" value="University medical officer" onchange="myfunction5('houseid24')">
+                               University medical officer
+                            </label>
+                        </div>
+			<div class="checkbox">
+                            <label class="checkbox-inline no_indent">
+                                <input  id="houseid25" name="Con2[]" type="checkbox" value="Academic warden" onchange="myfunction5('houseid25')">
+                              Academic warden
+                            </label>
+                        </div>
+			<div class="checkbox">
+                            <label class="checkbox-inline no_indent">
+                                <input  id="houseid26" name="Con2[]" type="checkbox" value="Chairman of University level committee" onchange="myfunction5('houseid26')">
+                              Chairman of University level committee
+                            </label>
+                        </div>
+			<div class="checkbox">
+                            <label class="checkbox-inline no_indent">
+                                <input  id="houseid27" name="Con2[]" type="checkbox" value="Member of MPC" onchange="myfunction5('houseid27')">
+                              Member of MPC
+                            </label>
+                        </div>
+			<div class="checkbox">
+                            <label class="checkbox-inline no_indent">
+                                <input  id="houseid28" name="Con2[]" type="checkbox" value="President/Secretary/Treasurer of Welfare Society SUSL,SUTA,UEOA,CUTTA
+                     Staff Trade Union of the Sabaragamuwa university of Sri Lanka" onchange="myfunction5('houseid28')">
+                              President/Secretary/Treasurer of Welfare Society SUSL,SUTA,UEOA,CUTTA
+                              Staff Trade Union of the Sabaragamuwa university of Sri Lanka
+                            </label>
+                        </div>
+	     </div>
                 </br>
              <div class="form-group">
                     <div class="col-sm-2"> <label><a> Full marks</a></label></div>
