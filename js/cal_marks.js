@@ -64,6 +64,7 @@ full_marks.value=Number(marks1).toFixed(2);
 //final marks of applicant and spouce.................................................
 marks2=marks_for_desig+parseFloat(dist_marks)+marks_for_exp+parseFloat(marks_for_contri);
 final_marks.value=Number(marks2).toFixed(2);
+document.getElementById('tbl26').value=Number(marks2).toFixed(2);
 }
 
 // calculate distance marks.................
