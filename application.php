@@ -804,7 +804,7 @@ p {
                 	</tr>
 			<tr align="center">
 				<td colspan ="2" align="center"><b>Total</b><td>
-				<td><input type="text"  name="tb26" placeholder="0.00" id="tb26" readonly="true"/></td>
+				<td><input type="text"  name="tb26" placeholder="0.00" id="tbl26" readonly="true"/></td>
 			</tr>
                 </table>
 
