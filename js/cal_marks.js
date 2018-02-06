@@ -55,6 +55,7 @@ if(marks_for_contri>10){
 	marks_for_contri=10;
 }
 document.getElementById('tb23').value=Number(marks_for_contri).toFixed(2);
+document.getElementById('tb27').value=Number(marks_for_contri).toFixed(2);
 
 //full marks of applicant only....................................................
 marks1=parseFloat(desig_marks)+parseFloat(exp_marks)+parseFloat(dist_marks)+parseFloat(marks_for_contri);
@@ -83,6 +84,7 @@ var dis = document.getElementById("dist").value;
 var tb3 = document.getElementById('tb3');
 tb3.value=Number(marks1).toFixed(2);
 document.getElementById('tbl3').value=Number(marks1).toFixed(2);
+document.getElementById('tbl4').value=Number(marks1).toFixed(2);
 calmarks();
 } 
  
@@ -141,7 +143,6 @@ var des = document.getElementById("Desig").value;
         xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
                 document.getElementById("tb4").value = xmlhttp.responseText;
-				//document.getElementById("tb14").value = xmlhttp.responseText;
 				calmarks();
             }
         };
@@ -167,7 +168,7 @@ var dess = document.getElementById("Desig_s").value;
  
  }
  
- //service marks for spouce.................
+//service marks for spouce.................
 function myfunction3_2() { 
  
 var num1 = document.getElementById("Sservicepy").value;
@@ -285,7 +286,6 @@ calmarks();
 			count--;
 		}
 	}
-
 calmarks();
 
  }
