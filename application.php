@@ -778,30 +778,34 @@ p {
                 		<td><b>Spouse</b></td>
                 		<td><b>Final</b></td>
                 	</tr>
-                	<tr>
+                	<tr align="center">
                 		<td><b>Designation</b></td>
-                		<td><input type="text"  name="tb24" id="tb24" readonly="true"/></td>
-                		<td><input type="text"  name="tb25" id="tb25" readonly="true"/></td>
-                		<td><input type="text"  name="tb21" id="tb21" readonly="true"/></td>
+                		<td><input type="text"  name="tb24" placeholder="0.00" id="tb24" readonly="true"/></td>
+                		<td><input type="text"  name="tb25" placeholder="0.00" id="tb25" readonly="true"/></td>
+                		<td><input type="text"  name="tb21" placeholder="0.00" id="tb21" readonly="true"/></td>
                 	</tr>
-                	<tr>
+                	<tr align="center">
                 		<td><b>Distance</b></td>
-                		<td><input type="text"  name="tbl3" id="tbl3" readonly="true"/></td>
-                		<td><input type="text"  name="" placeholder="0.00" id="" readonly="true"/></td>
-                		<td><input type="text"  name="tb13" id="tb13" readonly="true"/></td>
+                		<td><input type="text"  name="tbl3" placeholder="0.00" id="tbl3" readonly="true"/></td>
+                		<td><input type="text"  name=""     placeholder="0.00" id="" readonly="true"/></td>
+                		<td><input type="text"  name="tbl4" placeholder="0.00" id="tbl4" readonly="true"/></td>
                 	</tr>
-                	<tr>
+                	<tr align="center">
                 		<td><b>Service</b></td>
-                		<td><input type="text"  name="tb15" id="tb15"  readonly="true"/></td>
-                		<td><input type="text"  name="tb100" id="tb100"  readonly="true"/></td>
-                		<td><input type="text"  name="tb22" id="tb22" readonly="true"/></td>
+                		<td><input type="text"  name="tb15"  placeholder="0.00" id="tb15"  readonly="true"/></td>
+                		<td><input type="text"  name="tb100" placeholder="0.00" id="tb100"  readonly="true"/></td>
+                		<td><input type="text"  name="tb22"  placeholder="0.00" id="tb22" readonly="true"/></td>
                 	</tr>
-                	<tr>
+                	<tr align="center">
                 		<td><b>Duties</b></td>
-                		<td><input type="text"  name="tb23" id="tb23" readonly="true"/></td>
-                		<td><input type="text"  name="" id="" placeholder ="0.00" readonly="true"/></td>
-                		<td><input type="text"  name="tb23" id="tb23" readonly="true"/></td>
+                		<td><input type="text"  name="tb23" placeholder="0.00" id="tb23" readonly="true"/></td>
+                		<td><input type="text"  name="" id="" placeholder="0.00" readonly="true"/></td>
+                		<td><input type="text"  name="tb27" placeholder="0.00" id="tb27" readonly="true"/></td>
                 	</tr>
+			<tr align="center">
+				<td colspan ="2" align="center"><b>Total</b><td>
+				<td><input type="text"  name="tb26" placeholder="0.00" id="tb26" readonly="true"/></td>
+			</tr>
                 </table>
 
             </form>
