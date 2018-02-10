@@ -770,7 +770,7 @@ p {
                         <button type="submit" class="btn btn-success" name="signup" value="Sign up1">Submit</button>
                     </div>
                 </div>
-				<hr>
+		<hr>
                 <table border="1" width="100%" height="150px" align="center">
                 	<tr align="center">
                 		<td></td>
@@ -807,7 +807,6 @@ p {
 				<td><input type="text"  name="tb26" placeholder="0.00" id="tbl26" readonly="true"/></td>
 			</tr>
                 </table>
-
             </form>
         </div>
     </div>
