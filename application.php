@@ -730,16 +730,16 @@ p {
                 <div class="form-group">
                     <label class="col-sm-3 control-label">Address of the Working Place</label>
                     <div class="col-sm-8">
-                        <textarea rows="3" cols="50" class="form-control" required="" name="working_add" placeholder="Permanent address"></textarea>
-						<input type="text" class="form-control" name="city" placeholder="working_City" required="">
-						<input type="number" class="form-control" name="postal_code" placeholder="working_Postal Code" required="">
-					</div>
+                        <textarea rows="3" cols="50" class="form-control" name="working_add" placeholder="Permanent address"></textarea>
+			<input type="text" class="form-control" name="city" placeholder="working_City" >
+			<input type="number" class="form-control" name="postal_code" placeholder="working_Postal Code">
+		    </div>
                 </div>
 				
 		<div class="form-group">
                     <div class="col-sm-2"> <label><a>Final Mark</a></label></div>
                     <div class="col-sm-2">
-                           <input type="text"  name="tb11" id="tb11" readonly="true"/>
+                         <input type="text"  name="tb11" id="tb11" readonly="true"/>
                     </div>
                 </div>
 						
@@ -754,7 +754,7 @@ p {
                 </div>
 
                 <hr>
-      			<div class="form-group">
+      		<div class="form-group">
                     <div class="col-sm-11 col-sm-offset-1">
                         <div class="checkbox">
                             <label>
