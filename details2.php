@@ -55,15 +55,15 @@ p {
     include('header.php');
     ?>
     <br><br>
-  <div class="page-header">
-                <h2 align='center'>Free Accomadation</h2>              
-            </div>
+    <div class="page-header">
+         <h2 align='center'>Free Accomadation</h2>              
+	</div>
   <?php
 
 include('connection.php');
 $Acc_details = 'SELECT house_roomNO ,house_roomtype FROM accomadation where emp_nic is null';
    
-   $result = mysqli_query( $conn ,$Acc_details );
+   $result = mysqli_query( $conn ,$Acc_details ); // retrieve the room details........  
 
     print'<div id="table-wrapper">';
     print'<div id="table-scroll">';
@@ -99,8 +99,8 @@ $Acc_details = 'SELECT house_roomNO ,house_roomtype FROM accomadation where emp_
     
   $Acc_details_house = 'SELECT house_no ,house_type FROM house where emp_nic is null';
    
-   $result_h = mysqli_query( $conn ,$Acc_details_house);
-
+   $result_h = mysqli_query( $conn ,$Acc_details_house); // retrieve the house details....
+   
    while($array = mysqli_fetch_array($result_h)) 
     {
         print ' <tbody> <tr class="info"> <td class="col-md-1">';
@@ -117,6 +117,43 @@ $Acc_details = 'SELECT house_roomNO ,house_roomtype FROM accomadation where emp_
  print'</div>';
 print'</div>';
 ?>
+	 <div class="page-header">
+          <h2 align='center'>Add New Room or House</h2>            
+    </div>
+    <form id="" class="form-horizontal" role="form" method="post" action="">
+	<div class = "form-group">
+        <label class="col-sm-2 control-label"> Select Type :</label>
+        <div class="col-sm-6">
+			<div class="radio" required="">
+				<label>
+					<input type="radio" name="house"  value="house" /> House
+                </label>
+				<label>
+                    <input type="radio" name="room"  value="room" /> Room
+                </label>
+            </div>
+       </div>
+    </div>
+	
+    <div class="form-group">
+		<label for="inputName" class="col-sm-2 control-label">Enter Room No:</label>
+		<div class="col-sm-10">
+			<input type="text" class="form-control" id="room_no"  name='room_no' placeholder="B-01">
+		</div>
+    </div>
+	
+    <div class="form-group">
+		<label for="inputName" class="col-sm-2 control-label">Enter Room Type:</label>
+		<div class="col-sm-10">
+			<input type="text" class="form-control" id="room_type"  name='room_type' placeholder="B">
+		</div>
+    </div>
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+			<button type="submit" class="btn btn-primary" id="" name="">Submit</button>
+		</div>
+    </div>
+	</form>
 
 </body>
 </html>
