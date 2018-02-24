@@ -53,14 +53,15 @@ p {
      <?php
 
 include('connection.php');
-	$user_details = 'SELECT NIC, NameWI,Nacc,marks FROM users where Nacc is  not null GROUP BY NIC ORDER BY Designation';
-	$result = mysqli_query( $conn ,$user_details );
+	$user_details_house = 'SELECT NIC, NameWI,Nacc,marks FROM users where Accommodation_type = "house" and Nacc is not null GROUP BY NIC ORDER BY Designation';
+	$result_house = mysqli_query( $conn ,$user_details_house);
 	
     print'<div id="table-wrapper">';
-    print'<div id="table-scroll">';
+    //print'<div id="table-scroll">';
     print'<div class="row">';
 	
-    print'<div class="table-responsive col-sm-8 col-sm-offset-2">';
+    print'<div class="table-responsive col-sm-6">';
+	print'<h4 align = "center"> House Details </h4>';
     print'<table class="table table-striped">';
 	print'<thead>';
 	print"<tr class='active' >";
@@ -70,7 +71,37 @@ include('connection.php');
     print'<th class="col-md-4">'."Marks"."</th>"; 
     print "</tr>";
         
-   while($array = mysqli_fetch_array($result))
+   while($array = mysqli_fetch_array($result_house))
+   {
+        print ' <tbody> <tr class="success"> <td class="col-md-1">';
+        echo $array[0]; 
+        print '</td> <td class="col-md-2">';
+        echo $array[1]; 
+        print '</td> <td class="col-md-3">';
+        echo $array[2]; 
+        print '</td> <td class="col-md-4">';
+        echo $array[3]; 
+        print '</td> </tr >';
+    }
+    print " </tbody>";
+    print "</table>";
+	print "</div>";
+	
+	$user_details_room = 'SELECT NIC, NameWI,Nacc,marks FROM users where Accommodation_type = "room" and Nacc is not null GROUP BY NIC ORDER BY Designation';
+	$result_room = mysqli_query( $conn ,$user_details_room);
+	
+	print'<div class="table-responsive col-sm-6">';
+	print'<h4 align="center"> Room Details </h4>';
+    print'<table class="table table-striped">';
+	print'<thead>';
+	print"<tr class='active' >";
+    print'<th class="col-md-1">'."NIC"."</th>";
+    print'<th class="col-md-2">'."Name"."</th>"; 
+    print '<th class="col-md-3">'."Accomadation Type"."</th>";
+    print'<th class="col-md-4">'."Marks"."</th>"; 
+    print "</tr>";
+        
+   while($array = mysqli_fetch_array($result_room))
    {
         print ' <tbody> <tr class="success"> <td class="col-md-1">';
         echo $array[0]; 
@@ -87,7 +118,7 @@ include('connection.php');
 	print "</div>";
 	 
     print "</div>";
-    print "</div>";
+    //print "</div>";
     print "</div>"
 	
 ?>
