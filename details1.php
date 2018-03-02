@@ -1,7 +1,6 @@
 <html>
   <head>
-
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <title>Application</title>
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"></script>  
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
@@ -9,17 +8,19 @@
   <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css"/>
   <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/js/bootstrapValidator.min.js"> </script>
 <style>
+	
 #table-wrapper {
   position:relative;
 }
+	
 #table-scroll {
   height:300px;
   overflow:auto;  
   margin-top:20px;
 }
+	
 #table-wrapper table {
   width:100%;
-
 }
 
 #table-wrapper table thead th .text {
@@ -31,8 +32,6 @@
   border:1px solid red;
 }
  
-
-
 h1 {
     color: white;
     text-align: center;
@@ -50,9 +49,8 @@ p {
     ?>
   <div class="page-header">
     <br><br>
-                <h2 align='center'>Employees Requested for Accomadation(Room)</h2>
-                
-            </div>
+                <h2 align='center'>Employees Requested for Accomadation(Room)</h2>               
+  </div>
   
      <?php
 
@@ -71,7 +69,7 @@ $user_details = 'SELECT users.NIC, users.NameWI,users.Room_house_Type,users.mark
     print"<tr class='active'>";
     print'<th class="col-md-1">'."NIC"."</th>";
     print'<th class="col-md-2">'."Name"."</th>"; 
-	  print'<th class="col-md-2">'."Designation"."</th>"; 
+    print'<th class="col-md-2">'."Designation"."</th>"; 
     print'<th class="col-md-3">'."Requested Accomadation"."</th>";
     print'<th class="col-md-3">'."Requested Order"."</th>";
     print'<th class="col-md-4">'."Marks"."</th>"; 
@@ -84,7 +82,7 @@ $user_details = 'SELECT users.NIC, users.NameWI,users.Room_house_Type,users.mark
         echo $array[0]; 
         print '</td> <td class="col-md-2">';
         echo $array[1]; 
-    		print '</td> <td class="col-md-3">';
+    	print '</td> <td class="col-md-3">';
         echo $array[5]; 
         print '</td> <td class="col-md-3">';
         echo $array[2];
@@ -102,7 +100,7 @@ $user_details = 'SELECT users.NIC, users.NameWI,users.Room_house_Type,users.mark
 
     $Acc_details = 'SELECT house_roomNO ,house_roomtype FROM accomadation WHERE emp_nic is null ';
    
-   $result = mysqli_query( $conn ,$Acc_details );
+    $result = mysqli_query( $conn ,$Acc_details );
     print'<div class="table-responsive col-md-4">';
     print'<table class="table .table-bordered">';
     print'<thead>';
@@ -120,7 +118,7 @@ $user_details = 'SELECT users.NIC, users.NameWI,users.Room_house_Type,users.mark
         echo $array[0]; 
         print '</td> <td class="col-md-2">';
         echo $array[1]; 
-         print "</td> </tr></tbody>";
+        print "</td> </tr></tbody>";
     }
     
      print       '</table>';
@@ -161,10 +159,7 @@ print'</div>';
       <input type="text" class="form-control" id="date"  value="<?php echo date("Y-m-d") ?>" name='date' readonly>
     </div>
   </div>
-  
-  
-
-  
+   
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
       <button type="submit" class="btn btn-primary" id="signup" name="signup">Assaign</button>
@@ -212,13 +207,10 @@ $(document).ready(function() {
                     }
                 }
             }
-            
-         
         }
     });
 });
 </script>
           
-
 </body>
 </html>
