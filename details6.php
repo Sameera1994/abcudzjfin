@@ -1,8 +1,5 @@
-
 <html>
-    <head>
-
-        <head>
+  <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <title>Login</title>
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"></script>  
@@ -14,14 +11,15 @@
 #table-wrapper {
   position:relative;
 }
+    
 #table-scroll {
   height:300px;
   overflow:auto;  
   margin-top:20px;
 }
+    
 #table-wrapper table {
   width:100%;
-
 }
 
 #table-wrapper table thead th .text {
@@ -42,7 +40,6 @@ a {
     text-align: center;
 }
 
-
 p {
     font-family: verdana;
     font-size: 20px;
@@ -58,9 +55,8 @@ p {
     ?>
     <br><br>
     <div class="page-header">
-                <h2 align='center'>Employees Requested for Accomadation</h2>
-                
-            </div>
+                <h2 align='center'>Employees Requested for Accomadation</h2>            
+    </div>
   
      <?php
 
@@ -68,30 +64,22 @@ include('connection.php');
 $Acc_details = 'SELECT NIC,NameWI,UPF FROM users ';
    
    $result = mysqli_query( $conn ,$Acc_details );
-
-
-   
-      
+    
     print'<div id="table-wrapper">';
     print'<div id="table-scroll">';
     print'<div class="row" >';
     
     print'<div class="table-responsive col-sm-8 col-sm-offset-2">';
     print'<table class="table .table-condensed">';
-             print' <thead>';
-                print"<tr class='active'>";
+    print' <thead>';
+      print"<tr class='active'>";
       print'<th class="col-md-1">'."NIC"."</th>";
       print'<th class="col-md-2">'."Name"."</th>";
       print'<th class="col-md-2">'."UPF"."</th>"; 
      // print'<th class="col-md-2">'."delete"."</th>";
       print "</tr>";
       
-             
-            
-  
-    
    while($array = mysqli_fetch_array($result)) 
- 
     {
         print ' <tbody> <tr class="danger"> <td class="col-md-1">';
         echo $array[0]; 
@@ -101,22 +89,13 @@ $Acc_details = 'SELECT NIC,NameWI,UPF FROM users ';
         echo $array[2]; 
         //echo'</td><td class="col-md-2"><a  href="#contact"><img src="error.png" width="30" height="30"></a>'; 
         print '</td> </tr >';
-        
     }
     
     print " </tbody>";
-     
-
-    
-      
-    
-    
-   
-     print       '</table>';
+     print '</table>';
   print'</div>';
 print'</div>'; 
 print'</div>';
-
 
 ?>
 <section id="contact" >
@@ -159,15 +138,11 @@ $(document).ready(function() {
                         message: 'The House number is required and cannot be empty'
                     }
                 }
-            }
-            
-         
+            }         
         }
     });
 });
 </script>
-
-
 </body>
 </html>
 
