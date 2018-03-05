@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <head>
+<head>
 <?php
 session_start();
 
@@ -58,11 +58,14 @@ p {
 </head>
 
 <body>
-      <div class="container">
+  
+
+    <div class="container">
     <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
             <div class="page-header">
                 <hr>
+
                 <h3>Instructions</h3>
 
                 <p>
@@ -74,21 +77,21 @@ p {
                 <h2>APPLICATION FOR RESIDENTIAL FACILITIES</h2>
                 <h2>SABARAGAMUWA UNIVERSITY OF SRI LANKA</h2>
             </div>
-<form id="defaultForm" method="post" class="form-horizontal" action="sp1.php">
+<form id="defaultForm" method="post" class="form-horizontal" action="forminsertnew.php" enctype="multipart/form-data">
 				<div class="form-group">
 				<label class="col-sm-3 control-label">Accomadation Type</label>
-				<div class="col-sm-6">
-                        <div class="radio" required="">
+				<div class="col-sm-6" required="">
+                        <div class="radio">
                             <label>
-                                <input type="radio" name="house1"   value="house" /> House
+                                <input type="radio" name="house1" value="house" /> House
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input type="radio" name="house1"  value="room" /> Room
+                                <input type="radio" name="house1" value="room" /> Room
                             </label>
                         </div>
-                    </div>
+                 </div>
 				
 				</div>
 				<hr>
@@ -131,7 +134,7 @@ p {
                         </div>
                         <div class="checkbox">
                             <label class="checkbox-inline no_indent">
-                                <input name="houseid[]" id="houseid" type="checkbox" value=" Kinchigune">
+                                <input name="houseid[]" id="houseid" type="checkbox" value="Kinchigune">
                                 Kinchigune
                             </label>
                         </div>
@@ -170,6 +173,13 @@ p {
                     </div>
                 </div>
                 <hr>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">House or Room order:</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" name="h_r_order"  required="" placeholder="B,Kinchigune,Nerd" />
+                    </div>    
+                </div>
+                <hr>
                 <h4 class="form-group">DETAILS OF THE APPLICANT</h4>
                 <div class="form-group">
                     <label class="col-sm-3 control-label">Full Name</label>
@@ -186,7 +196,7 @@ p {
                           $res=mysqli_query($conn,$sqlnic);
                            while($row=mysqli_fetch_assoc($res)){
                         ?>
-                        <input type="text" class="form-control" value="<?php echo $row['Name'];?>" name="initName"required=""  placeholder="Ex: J. Watson" />
+                        <input type="text" class="form-control" value="<?php echo $row['Name'];?>" name="initName" readonly placeholder="Ex: J. Watson" />
 						   <?php } ?>   
                     </div>
                 </div>
@@ -195,7 +205,7 @@ p {
                     <label class="col-sm-3 control-label">Permanent Address</label>
                     <div class="col-sm-8">
                         <textarea rows="3" cols="50" class="form-control" required="" name="address" placeholder="Permanent address"></textarea>
-						<input type="text" class="form-control" name="city" placeholder="City" required="">
+						<input type="text" class="form-control" name="City" placeholder="City" required="">
 						<input type="number" class="form-control" name="postal_code" placeholder="Postal Code" required="">
 					</div>
                 </div>
@@ -245,38 +255,19 @@ p {
                     </div>
                 </div>
 				
-                <div class="form-group">
+               <div class="form-group">
                     <label class="col-sm-3 control-label">Category</label>
                     <div class="">
                         <select id="cat" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" onchange='showHint()'>
-    
-    <option>--Select Category--</option>
-    <option value=1>Academic Categories</option>
-    <option value=2>Medical/Dental Categories</option>
-    <option value=3>Academic Support Categories</option>
-    <option value=4>Executive categories</option>
-    <option value=5>Non-Academic Categories</option>
-    
-
-	
-    </select>
-	
-
-                    <!---    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" >Designation
-                            <span class="caret"></span></button>
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1" id="menu1" name="menu1">
-      <li role="presentation" ><a role="menuitem" tabindex="-1" >Senior Proffesor</a></li>
-      <li role="presentation" ><a role="menuitem" tabindex="-1">Proffesor</a></li>
-      <li role="presentation" ><a role="menuitem" tabindex="-1">Associate Professor</a></li>
-      <li role="presentation" ><a role="menuitem" tabindex="-1" >Senior Lecturer Gr.I</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" >Senior Lecturer Gr.I</a></li>
-      <li role="presentation" ><a role="menuitem" tabindex="-1"> Lecturer </a></li>
-      <li role="presentation" ><a role="menuitem" tabindex="-1" >Lecturer Probationary</a></li>
-
-    </ul>-->
+						<option>--Select Category--</option>
+						<option value=1>Academic Categories</option>
+						<option value=2>Medical/Dental Categories</option>
+						<option value=3>Academic Support Categories</option>
+						<option value=4>Executive categories</option>
+						<option value=5>Non-Academic Categories</option>
+						</select>
                     </div>
-					
-		</div>
+			  </div>
 		      <div class="form-group">
                     <label class="col-sm-3 control-label">Designation</label>
                     <div class="" id="dropdownid">
@@ -318,62 +309,37 @@ p {
                             </label>
                         </div>
                     </div>
-                </div>
-		        <div class="form-group">
+               </div>
+		       <div class="form-group">
                     <label class="col-sm-3 control-label">UPF No</label>
                     <div class="col-sm-8">
                         <input type="text" value="<?php echo $_SESSION['NIC'];?>" readonly class="form-control"required=""  name="Upf" placeholder="Ex: " />
                     </div>
-                </div>
+               </div>
 
-                <div class="form-group">
+               <div class="form-group">
                     <label class="col-sm-3 control-label">Faculty/Section</label>
                     <div class="col-sm-6 dropdown" >
-                       <!-- <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" id="menu2" name="menu2">Faculty/Branch
-                            <span class="caret"></span></button>
-                       <ul class="dropdown-menu" role="menu" aria-labelledby="menu1" >
-
-      <li role="presentation"><a role="menuitem" tabindex="-1" >Agriculture</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" >Applied Science</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1">Geomatics</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" >Management St</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" >Social Science</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" >Administration</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" >Finance</a></li>
-      
-    </ul>-->
-    <select name="Faculty" id ="faculty" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" onchange="showdep()" >
-    <option value="">--Select Faculty--</option>   
- <?php
- $sql="SELECT * FROM faculty";
- $res=mysqli_query($conn,$sql);
- while($row=mysqli_fetch_array($res)){
- echo "<option value='$row[1]'>$row[1]</option>";
- }
- ?> 
-    </select>
-                </div>
-                </div>
+					<select name="Faculty" id ="faculty" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" onchange="showdep()" >
+					<option value="">--Select Faculty--</option>   
+					<?php
+						$sql="SELECT * FROM faculty";
+						$res=mysqli_query($conn,$sql);
+						while($row=mysqli_fetch_array($res)){
+							echo "<option value='$row[1]'>$row[1]</option>";
+						}
+					?> 
+					</select>
+					</div>
+              </div>
                 <div class="form-group">
                     <label class="col-sm-3 control-label">Department/Branch</label>
                     <div class="col-sm-6 dropdown">
-                     <!--   <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Department/Section
-                            <span class="caret"></span></button>
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-      <li role="presentation"><a role="menuitem" tabindex="-1" >CIS</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" >FST</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" >NRM</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" >PST </a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" >SMP</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" >GIS</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" >MAP</a></li>
-      
-    </ul>-->
-    <select name="Dept" id="Dept" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" >
-    <option value="">--Select Department--</option>
-  
-</select>
-    </select>
+
+				<select name="Dept" id="Dept" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" >
+					<option value="">--Select Department--</option> 
+				</select>
+				</select>
                     </div>
                 </div>
 
@@ -386,19 +352,17 @@ p {
                         <label>Permanent (M)</label> <input type="number"   class="form-control" name="servicepm" id="servicepm" onchange='myfunction3()'/>
                     </div>
                     <div class="col-sm-2" id="contact3">
-                        <label>Temporary (Y)</label> <input type="number"   class="form-control" name="servicety" id="servicety" onchange='myfunction3()'/>
+                        <label>Temporary (Y)</label> <input type="number" value="0"  class="form-control" name="servicety" id="servicety" onchange='myfunction3()'/>
                     </div>
                     <div class="col-sm-2" id="contact4">
-                        <label>Temporary (M)</label> <input type="number"   class="form-control" name="servicetm" id="servicetm" onchange='myfunction3()' />
+                        <label>Temporary (M)</label> <input type="number" value="0"  class="form-control" name="servicetm" id="servicetm" onchange='myfunction3()' />
                     </div>
-                    
                     
                 </div>
                  <div class="form-group">
                     <div class="col-sm-2"> <label><a>Marks for Duration</a></label></div>
                     <div class="col-sm-2">
-                     
-                            <input type="text"  name="tb5" id="tb5"  readonly="true"/>
+						<input type="text"  name="tb5" id="tb5"  readonly="true"/>
                     </div>
                 </div>
 
@@ -450,82 +414,76 @@ p {
     </select>
 	</div>
 	<div class="col-sm-3">
-	<input type="number" placeholder= "Duration" class="form-control" name="servicepy" id="service_duration"/>
+	<input type="number" placeholder= "Duration" class="form-control" name="Pacc_duration" id="service_duration"/>
     </div>
-                    <!--<div class="col-sm-2">
-                        <input type="number" class="form-contvol" name="prevyears" />
-                    </div>
-                    <div class="col-sm-2">
-                        <button type="button" class="btn btn-default">+</button>
-                    </div>-->
                 </div>
                 <label><font size=4>Current Additional Duties:</font></label>
-		<div class="form-group">
+				 <div class="form-group">
                         <div class="checkbox">
                             <label class="checkbox-inline no_indent">
-                                <input id="houseid16" name="Con2[]" type="checkbox" value="Head of the Department" onchange="myfunction5('houseid16')">
+                                <input id="houseid16" name="duty1[]" type="checkbox" value="Yes" onchange="myfunction5('houseid16')">
                                 Head of the Department
                             </label>
                         </div>
                         <div class="checkbox">
                             <label class="checkbox-inline no_indent">
-                                <input  id="houseid20" name="Con2[]" type="checkbox" value="Directors of Centers" onchange="myfunction5('houseid20')">
+                                <input  id="houseid20" name="duty2[]" type="checkbox" value="Yes" onchange="myfunction5('houseid20')">
                                Directors of Centers
                             </label>
                         </div>
-			<div class="checkbox">
+						<div class="checkbox">
                             <label class="checkbox-inline no_indent">
-                                <input  id="houseid21" name="Con2[]" type="checkbox" value="Coordinator appointed by VC" onchange="myfunction5('houseid21')">
+                                <input  id="houseid21" name="duty3" type="checkbox" value="Yes" onchange="myfunction5('houseid21')">
                                Coordinator appointed by VC
                             </label>
                         </div>
-			<div class="checkbox">
+						<div class="checkbox">
                             <label class="checkbox-inline no_indent">
-                                <input  id="houseid22" name="Con2[]" type="checkbox" value="Senior Student Counselor" onchange="myfunction5('houseid22')">
+                                <input  id="houseid22" name="duty4" type="checkbox" value="Yes" onchange="myfunction5('houseid22')">
                                Senior Student Counselor
                             </label>
                         </div>
-			<div class="checkbox">
+						<div class="checkbox">
                             <label class="checkbox-inline no_indent">
-                                <input  id="houseid23" name="Con2[]" type="checkbox" value="Deputy Senior Student Counselor" onchange="myfunction5('houseid23')">
+                                <input  id="houseid23" name="duty5" type="checkbox" value="Yes" onchange="myfunction5('houseid23')">
                                Deputy Senior Student Counselor
                             </label>
                         </div>
-			<div class="checkbox">
+						<div class="checkbox">
                             <label class="checkbox-inline no_indent">
-                                <input  id="houseid24" name="Con2[]" type="checkbox" value="University medical officer" onchange="myfunction5('houseid24')">
+                                <input  id="houseid24" name="duty6" type="checkbox" value="Yes" onchange="myfunction5('houseid24')">
                                University medical officer
                             </label>
                         </div>
-			<div class="checkbox">
+						<div class="checkbox">
                             <label class="checkbox-inline no_indent">
-                                <input  id="houseid25" name="Con2[]" type="checkbox" value="Academic warden" onchange="myfunction5('houseid25')">
+                                <input  id="houseid25" name="duty7" type="checkbox" value="Yes" onchange="myfunction5('houseid25')">
                               Academic warden
                             </label>
                         </div>
-			<div class="checkbox">
+						<div class="checkbox">
                             <label class="checkbox-inline no_indent">
-                                <input  id="houseid26" name="Con2[]" type="checkbox" value="Chairman of University level committee" onchange="myfunction5('houseid26')">
+                                <input  id="houseid26" name="duty8	" type="checkbox" value="Yes" onchange="myfunction5('houseid26')">
                               Chairman of University level committee
                             </label>
                         </div>
-			<div class="checkbox">
+						<div class="checkbox">
                             <label class="checkbox-inline no_indent">
-                                <input  id="houseid27" name="Con2[]" type="checkbox" value="Member of MPC" onchange="myfunction5('houseid27')">
+                                <input  id="houseid27" name="duty9" type="checkbox" value="Yes" onchange="myfunction5('houseid27')">
                               Member of MPC
                             </label>
                         </div>
-			<div class="checkbox">
+						<div class="checkbox">
                             <label class="checkbox-inline no_indent">
-                                <input  id="houseid28" name="Con2[]" type="checkbox" value="President/Secretary/Treasurer of Welfare Society SUSL,SUTA,UEOA,CUTTA
-                     Staff Trade Union of the Sabaragamuwa university of Sri Lanka" onchange="myfunction5('houseid28')">
+                                <input  id="houseid28" name="duty10" type="checkbox" value="Yes" onchange="myfunction5('houseid28')">
                               President/Secretary/Treasurer of Welfare Society SUSL,SUTA,UEOA,CUTTA
                               Staff Trade Union of the Sabaragamuwa university of Sri Lanka
                             </label>
                         </div>
-	     </div>
-                </br>
-             <div class="form-group">
+				</div>
+				
+                <br>
+                <div class="form-group">
                     <div class="col-sm-2"> <label><a> Full marks</a></label></div>
                     <div class="col-sm-2">
                      
@@ -613,36 +571,30 @@ p {
 				<div class="form-group">
                     <label class="col-sm-3 control-label">Duratoin</label>
                     <div class="col-sm-2">
-                        <label>Years</label><input type="number" class="form-control" name="sedy" />
+                        <label>Years</label><input type="number" class="form-control" value="0" name="sedy" />
                     </div>
                     <div class="col-sm-2">
-                        <label>Months</label><input type="number" class="form-control" name="sedm" />
+                        <label>Months</label><input type="number" class="form-control" value="0" name="sedm" />
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-3 control-label">Is your spouse a employee of SUSL?</label>
                        
                         <div class="col-sm-6">
-                        <div class="radio" required="">
+                        <div class="radio">
                             <label>
-                                <input type="radio" name="agree"   value="true" /> Yes
+                                <input type="radio" name="susl_agree"   value="true" /> Yes
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input type="radio" name="agree"  value="False" /> No
+                                <input type="radio" name="susl_agree"  value="False" /> No
                             </label>
                         </div>
-                    </div>    
+                    </div>
                     </div>
                 
                 <label >For SUSL employers only </label><br><br>
-                <div class="form-group">
-                    <label class="col-sm-3 control-label">Spouse's NIC Number</label>
-                    <div class="col-sm-5">
-                        <input type="text" class="form-control" name="spnic" placeholder="Ex:75468123v" />
-                    </div>
-                </div>
                <div class="form-group">
                     <label class="col-sm-3 control-label">Category</label>
                     <div class="">
@@ -696,23 +648,26 @@ p {
                      <input type="text"  name="tb9" id="tb9" readonly="true"/>
                     </div>
                 </div>
-					 
-				
-				
-					 
+				<div class="form-group">
+                    <label class="col-sm-3 control-label">Salary Code:</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" name="spouse_salary_code" placeholder="" />
+                    </div>
+                </div>	 
+ 
                 <div class="form-group">
                     <label class="col-sm-3 control-label" id="Sservicep">Full service period to SUSL</label>
                     <div class="col-sm-2" id="Scontact1">
-                        <label>Permanent (Y)</label> <input type="number"  class="form-control" name="Sservicepy" id="Sservicepy" onchange="myfunction3_2()"/>
+                        <label>Permanent (Y)</label> <input type="number"  value="0" class="form-control" name="Sservicepy" id="Sservicepy" onchange="myfunction3_2()"/>
                     </div>
                     <div class="col-sm-2" id="Scontact2">
-                        <label>Permanent (M)</label> <input type="number"   class="form-control" name="Sservicepm" id="Sservicepm" onchange="myfunction3_2()"/>
+                        <label>Permanent (M)</label> <input type="number"   value="0" class="form-control" name="Sservicepm" id="Sservicepm" onchange="myfunction3_2()"/>
                     </div>
                     <div class="col-sm-2" id="Scontact3">
-                        <label>Temporary (Y)</label> <input type="number"  class="form-control" name="Sservicety" id="Sservicety" onchange="myfunction3_2()"/>
+                        <label>Temporary (Y)</label> <input type="number"  value="0" class="form-control" name="Sservicety" id="Sservicety" onchange="myfunction3_2()"/>
                     </div>
                     <div class="col-sm-2" id="Scontact4">
-                        <label>Temporary (M)</label> <input type="number"   class="form-control" name="Sservicetm" id="Sservicetm" onchange="myfunction3_2()" />
+                        <label>Temporary (M)</label> <input type="number"   value="0" class="form-control" name="Sservicetm" id="Sservicetm" onchange="myfunction3_2()" />
                     </div>
                     
                     
@@ -730,47 +685,48 @@ p {
                 <div class="form-group">
                     <label class="col-sm-3 control-label">Address of the Working Place</label>
                     <div class="col-sm-8">
-                        <textarea rows="3" cols="50" class="form-control" name="working_add" placeholder="Permanent address"></textarea>
-			<input type="text" class="form-control" name="city" placeholder="working_City" >
-			<input type="number" class="form-control" name="postal_code" placeholder="working_Postal Code">
-		    </div>
+                        <textarea rows="3" cols="50" class="form-control"  name="working_add" placeholder="Permanent address"></textarea>
+						<input type="text" class="form-control" name="working_City" placeholder="" >
+						<input type="number" class="form-control" name="sp_postal_code" placeholder="" >
+					</div>
                 </div>
 				
-		<div class="form-group">
+				<div class="form-group">
                     <div class="col-sm-2"> <label><a>Final Mark</a></label></div>
                     <div class="col-sm-2">
-                         <input type="text"  name="tb11" id="tb11" readonly="true"/>
+                     
+                           <input type="text"  name="tb11" id="tb11" readonly="true"/>
                     </div>
                 </div>
-						
+				
+				
                 <div class="form-group">
                     <label class="col-sm-3 control-label">Documents Attached relevant to the Articles 30 of the Constitution</label>
                     <div class="col-sm-6">
-                        <label>Letter from the Employer</label> <input type="checkbox" name="empl" value="y" />
-                    </div>
-                    <div class="col-sm-6">
-                        <label>Letter from the GN counter signed by DS</label> <input type="checkbox" name="gsl" value="y" />
+                        <label>Letter from the Employer</label> <input type="checkbox" name="empl" value="y"/>
+						<div class="kv-avatar center-block">	
+					        <input type="file" name="letterImage" id="letterImage">
+					    </div>
                     </div>
                 </div>
 
                 <hr>
-      		<div class="form-group">
+      			<div class="form-group">
                     <div class="col-sm-11 col-sm-offset-1">
                         <div class="checkbox">
                             <label>
                                 <input type="checkbox" name="agree" value="agree"/> 
-				I hereby certify that the particulars submitted by me in this application are true and accurate. 
-				I am aware that if any of these particulars are found to be false or inaccurate, I am liable to be disqualified before allocation for accommodation and to be vacated the accommodation by giving 01 (One) month notice if the inaccuracy is detected after appointment. Further, I noted that the last statement of the Article 33 will be imposed if I fail to vacate the accommodation assuming that the tenure is expired at the date of notice given by the SUSL.
+								 I hereby certify that the particulars submitted by me in this application are true and accurate.  I am aware that if any of these particulars are found to be false or inaccurate, I am liable to be disqualified before allocation for accommodation and to be vacated the accommodation by giving 01 (One) month notice if the inaccuracy is detected after appointment. Further, I noted that the last statement of the Article 33 will be imposed if I fail to vacate the accommodation assuming that the tenure is expired at the date of notice given by the SUSL.
                             </label>
                         </div>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-sm-9 col-sm-offset-3">
-                        <button type="submit" class="btn btn-success" name="signup" value="Sign up1">Submit</button>
+                        <button type="submit" class="btn btn-success" name="submit" value="signup">Submit</button>
                     </div>
                 </div>
-		<hr>
+				<hr>
                 <table border="1" width="100%" height="150px" align="center">
                 	<tr align="center">
                 		<td></td>
@@ -802,12 +758,13 @@ p {
                 		<td><input type="text"  name="" id="" placeholder="0.00" readonly="true"/></td>
                 		<td><input type="text"  name="tb27" placeholder="0.00" id="tb27" readonly="true"/></td>
                 	</tr>
-			<tr align="center">
-				<td colspan ="2" align="center"><b>Total</b><td>
-				<td><input type="text"  name="tb26" placeholder="0.00" id="tbl26" readonly="true"/></td>
-			</tr>
+					<tr align="center">
+						<td colspan ="2" align="center"><b>Total</b><td>
+						<td><input type="text"  name="tb26" placeholder="0.00" id="tbl26" readonly="true"/></td>
+					</tr>
                 </table>
             </form>
+			<br><br><br>
         </div>
     </div>
 </div>
