@@ -11,8 +11,9 @@ if(isset($_POST['signup'])){
 
 	$new  = mysqli_query($conn, "DELETE FROM users WHERE NIC='$_POST[UID]';");
 	$new2 = mysqli_query($conn, "DELETE FROM mark_table WHERE nic = '$_POST[UID]';"); 
+	$new3 = mysqli_query($conn, "DELETE FROM user_letter_table WHERE nic='$_POST[UID]';");
 
-	if ((!$new)||(!$new2)) {
+	if ((!$new)||(!$new2)||(!$new3)) {
 		die('Could not get data: ' . mysqli_error());
 	}  
   
