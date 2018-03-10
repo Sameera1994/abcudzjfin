@@ -4,18 +4,19 @@
 <?php
 session_start();
 
-if(empty($_SESSION['NIC'])){
-header('Location: admin.php');
-}else if($_SESSION['NIC']=="Admin"){
-header('Location: admin_details.php');
+if(empty($_SESSION['NIC'])) {
+	header('Location: admin.php');
+}
+else if($_SESSION['NIC']=="Admin") {
+	header('Location: admin_details.php');
 }
 else{
-include('connection.php');
-$ses=$_SESSION['NIC'];
+	include('connection.php');
+	$ses=$_SESSION['NIC'];
 
 ?>
 
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <title>Application</title>
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"></script>  
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
@@ -50,13 +51,9 @@ p {
  display:none;
 }
 </style>
-<?php
-    include('hello.php');
-	
-    ?>
+<?php include('hello.php'); ?>
 
 </head>
-
 <body>
   
 
