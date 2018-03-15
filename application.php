@@ -4,15 +4,26 @@
 <?php
 session_start();
 
-if(empty($_SESSION['NIC'])) {
-	header('Location: admin.php');
-}
-else if($_SESSION['NIC']=="Admin") {
-	header('Location: admin_details.php');
+if(empty($_SESSION['NIC'])){
+header('Location: admin.php');
+}else if($_SESSION['NIC']=="Admin"){
+header('Location: admin_details.php');
 }
 else{
-	include('connection.php');
-	$ses=$_SESSION['NIC'];
+include('connection.php');
+$ses=$_SESSION['NIC'];
+
+$disable = "";
+$day     = date('d');
+
+if($day >= 30){
+	$display = "Sorry, Try apply within 1<sup>st</sup>-15<sup>th</sup> of every months.";
+	$disable = "disabled";
+}
+else {
+	$display = "Application are now Available";
+	$disable = "";
+}
 
 ?>
 
@@ -51,9 +62,13 @@ p {
  display:none;
 }
 </style>
-<?php include('hello.php'); ?>
+<?php
+    include('hello.php');
+	
+    ?>
 
 </head>
+
 <body>
   
 
@@ -62,15 +77,14 @@ p {
         <div class="col-sm-8 col-sm-offset-2">
             <div class="page-header">
                 <hr>
-
                 <h3>Instructions</h3>
-
                 <p>
             Please refer to Articles 14-19, 28-30, 34, 35, 37-40 of the Constitution for Allocation of Accommodation-2015-SUSL (CAAA-2015-SUSL) before completing the application.
             <br>Incomplete applications will be rejected without prior notice.
-
                 </p>
                 <hr>
+				<?php echo "<p style='color: red;'><b><i>$display</i></b></p>";?>
+				<hr>
                 <h2>APPLICATION FOR RESIDENTIAL FACILITIES</h2>
                 <h2>SABARAGAMUWA UNIVERSITY OF SRI LANKA</h2>
             </div>
@@ -188,6 +202,7 @@ p {
                 <div class="form-group">
                     <label class="col-sm-3 control-label">Name with Initials</label>
                     <div class="col-sm-8">
+					
 					<?php
                           $sqlnic="SELECT * FROM user_verify WHERE UPF='$_SESSION[NIC]'";
                           $res=mysqli_query($conn,$sqlnic);
@@ -343,10 +358,10 @@ p {
                 <div class="form-group">
                     <label class="col-sm-3 control-label" id="servicep">Full Service Period to SUSL</label>
                     <div class="col-sm-2" id="contact1">
-                        <label>Permanent (Y)</label> <input type="number"   class="form-control" name="servicepy" id="servicepy" onchange='myfunction3()'/>
+                        <label>Permanent (Y)</label> <input type="number"  value="0" class="form-control" name="servicepy" id="servicepy" onchange='myfunction3()'/>
                     </div>
                     <div class="col-sm-2" id="contact2">
-                        <label>Permanent (M)</label> <input type="number"   class="form-control" name="servicepm" id="servicepm" onchange='myfunction3()'/>
+                        <label>Permanent (M)</label> <input type="number"  value="0" class="form-control" name="servicepm" id="servicepm" onchange='myfunction3()'/>
                     </div>
                     <div class="col-sm-2" id="contact3">
                         <label>Temporary (Y)</label> <input type="number" value="0"  class="form-control" name="servicety" id="servicety" onchange='myfunction3()'/>
@@ -492,7 +507,7 @@ p {
                     <div class="col-sm-11 col-sm-offset-1">
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" name="agree" value="agree"/> I certify that the particulars furnished by the applicant in this application relevant to item 16 are true and accurate.
+                                <input type="checkbox" name="agree" value="agree" required /> I certify that the particulars furnished by the applicant in this application relevant to item 16 are true and accurate.
 								<!--<input type="checkbox" name="agree" value="agree" /> I hereby certify that the particulars submitted by me in this application are true and accurate.  I am aware that if any of these particulars are found to be false or inaccurate, I am liable to be disqualified before allocation for accommodation and to be vacated the accommodation by giving 01 (One) month notice if the inaccuracy is detected after appointment. Further, I noted that the last statement of the Article 25 will be imposed if I fail to vacate the accommodation assuming that the tenure is expired at the date of notice given by the SUSL.-->
                             </label>
                         </div>
@@ -519,54 +534,42 @@ p {
                 <div class="form-group">
                     <label class="col-sm-3 control-label">Spouse's Name</label>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control" name="spouseName" placeholder="Ex: John Watson" />
+						<input type="text" class="form-control" name="spouseName"  value="" placeholder="Ex: John Watson" />
                     </div>
                 </div>
-                <!--<div class="form-group">
-                    <label class="col-sm-3 control-label">NIC of the applicant</label>
-                    <div class="col-sm-5">
-                        <?php
-                          $sqlnic="SELECT * FROM user_verify WHERE UPF='$_SESSION[NIC]'";
-                          $res=mysqli_query($conn,$sqlnic);
-                           while($row=mysqli_fetch_assoc($res)){
-                        ?>
-                        <input type="text" readonly class="form-control" value="<?php echo $row['UID'];?>"name="nic"required=""  placeholder="Ex:75468123v"/>
-                           <?php } ?> 
-                    </div>
-                </div>-->
-
                 <div class="form-group">
                     <label class="col-sm-3 control-label">GN Division</label>
                     <div class="col-sm-5">
-                        <input type="text" class="form-control" name="gndiv" placeholder="Ex: Gannoruwa Est" />
+						<input type="text" class="form-control" name="gndiv"  value="" placeholder="Ex: Gannoruwa Est" />
+						
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-3 control-label">DS Division</label>
                     <div class="col-sm-5">
-                        <input type="text" class="form-control" name="dsdiv" placeholder="Ex: Yatinuwara" />
+						<input type="text" class="form-control" name="dsdiv"  value="" placeholder="Ex: Yatinuwara" />
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-3 control-label">District</label>
                     <div class="col-sm-5">
-                        <input type="text" class="form-control" name="district" placeholder="Ex: Kandy" />
+						<input type="text" class="form-control" name="district"  value="" placeholder="Ex: Kandy" />
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-3 control-label">Spouse's Employment</label>
                     <div class="col-sm-5">
-                        <input type="text" class="form-control" name="spemp" placeholder="Ex: Teacher" />
+						<input type="text" class="form-control" name="spemp"  value="" placeholder="Ex: Teacher" />
                 </div>
                 </div>
 				<div class="form-group">
                     <label class="col-sm-3 control-label">Organization/Institute</label>
                     <div class="col-sm-5">
-                        <input type="text" class="form-control" name="spem_org" placeholder="" />
+						<input type="text" class="form-control" name="spem_org"  value="" placeholder="KFC" />
                     </div>
                 </div>
 				<div class="form-group">
-                    <label class="col-sm-3 control-label">Duratoin</label>
+                    <label class="col-sm-3 control-label">Duration</label>
                     <div class="col-sm-2">
                         <label>Years</label><input type="number" class="form-control" value="0" name="sedy" />
                     </div>
@@ -575,22 +578,21 @@ p {
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-3 control-label">Is your spouse a employee of SUSL?</label>
-                       
+                    <!--<label class="col-sm-6 control-label">If an employee of SUSL</label>
                         <div class="col-sm-6">
                         <div class="radio">
                             <label>
-                                <input type="radio" name="susl_agree"   value="true" /> Yes
+                                <input type="radio" name="susl_agree" value="true" /> Yes
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input type="radio" name="susl_agree"  value="False" /> No
+                                <input type="radio" name="susl_agree" value="False" /> No
                             </label>
                         </div>
-                    </div>
-                    </div>
-                
+                    </div>-->
+               </div>
+                <hr>
                 <label >For SUSL employers only </label><br><br>
                <div class="form-group">
                     <label class="col-sm-3 control-label">Category</label>
@@ -632,8 +634,6 @@ p {
   
    <option value="">--Select Designation--</option>
     
-	
-
                     	</select>
                      </div>			
 					</div>
@@ -648,7 +648,7 @@ p {
 				<div class="form-group">
                     <label class="col-sm-3 control-label">Salary Code:</label>
                     <div class="col-sm-5">
-                        <input type="text" class="form-control" name="spouse_salary_code" placeholder="" />
+                        <input type="text" class="form-control" name="spouse_salary_code"  value="" placeholder="" />
                     </div>
                 </div>	 
  
@@ -676,15 +676,23 @@ p {
                      <input type="text"  name="tb10" id="tb10" readonly="true"/>
                     </div>
                 </div>
-                 
+                <hr>
                 <label >For non SUSL employers only </label><br><br>
 
-                <div class="form-group">
+                <!--<div class="form-group">
                     <label class="col-sm-3 control-label">Address of the Working Place</label>
                     <div class="col-sm-8">
-                        <textarea rows="3" cols="50" class="form-control"  name="working_add" placeholder="Permanent address"></textarea>
-						<input type="text" class="form-control" name="working_City" placeholder="" >
-						<input type="number" class="form-control" name="sp_postal_code" placeholder="" >
+						<input type="text" class="form-control" name="working_add"  value="" placeholder="Permanent address" />
+						<input type="text" class="form-control" name="working_City"  value="" placeholder="" />
+						<input type="number" class="form-control" name="sp_postal_code"  value="" placeholder="" />
+					</div>
+                </div>-->
+				<div class="form-group">
+                    <label class="col-sm-3 control-label">Address of the Working Place</label>
+                    <div class="col-sm-8">
+						<input type="text" class="form-control" name="working_add"    value="" placeholder="" />
+						<input type="text" class="form-control" name="working_City"   value="" placeholder="" />
+						<input type="number" class="form-control" name="sp_postal_code" value="" placeholder="" />
 					</div>
                 </div>
 				
@@ -712,7 +720,7 @@ p {
                     <div class="col-sm-11 col-sm-offset-1">
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" name="agree" value="agree"/> 
+                                <input type="checkbox" name="agree" value="agree" required /> 
 								 I hereby certify that the particulars submitted by me in this application are true and accurate.  I am aware that if any of these particulars are found to be false or inaccurate, I am liable to be disqualified before allocation for accommodation and to be vacated the accommodation by giving 01 (One) month notice if the inaccuracy is detected after appointment. Further, I noted that the last statement of the Article 33 will be imposed if I fail to vacate the accommodation assuming that the tenure is expired at the date of notice given by the SUSL.
                             </label>
                         </div>
@@ -720,7 +728,7 @@ p {
                 </div>
                 <div class="form-group">
                     <div class="col-sm-9 col-sm-offset-3">
-                        <button type="submit" class="btn btn-success" name="submit" value="signup">Submit</button>
+                        <button type="submit" class="btn btn-success" name="submit" <?php echo $disable ?> value="signup">Submit</button>
                     </div>
                 </div>
 				<hr>
