@@ -59,22 +59,18 @@ form {
      <!-- Alignment -->
 <table width=85% align="center" cellpadding=5 cellspacing=5>
 <tr><td>
-	 <div class="" style="margin-top:5%;"> 
-
+<div class="" style="margin-top:5%;"> 
 <form id="contactForm" method="post" class="form-horizontal"  action="com.php">
     <div class="page-header" >
-                <br>
-                <h2 align="center">Please Login</h2>
-            </div>
-
-    
+    <br>
+       <h2 align="center">Please Login</h2>
+    </div>
     <div class="form-group">
         <label class="col-md-3 control-label">ID</label>
         <div class="col-md-6">
             <input type="text" class="form-control" required=""  name="AdID"  id="AdID"/>
         </div>
     </div>
-    
     <div class="form-group">
         <label class="col-md-3 control-label">Password</label>
         <div class="col-md-6">
@@ -82,10 +78,10 @@ form {
         </div>
     </div>
     <div class="form-group">
-                        <div class="col-sm-9 col-sm-offset-3">
-                            <div id="responsemsg"></div>
-                        </div>
-                    </div>
+         <div class="col-sm-9 col-sm-offset-3">
+              <div id="responsemsg"></div>
+         </div>
+    </div>
     <!-- #messages is where the messages are placed inside -->
     <div class="form-group">
         <div class="col-md-9 col-md-offset-3">
@@ -102,59 +98,53 @@ form {
 
     <!--Not registered?|<a href="user.php">sign up</a>-->
     
-
-
-
-</div>
-</form>
-	 
+	</div>
+</form>	 
 </br>
 </div>
 </td>
 <td width="100"></td>
 <td>
   <div style=""> 
-	
 <form id="contactForm" method="post" class="form-horizontal"  action="userlogin.php">
-    <div class="page-header" >
-                <br>
-                <h2 align="center">For Registration</h2>
-            </div>
+		<div class="page-header" >
+        <br>
+            <h2 align="center">For Registration</h2>
+        </div>
 
-    
-    <div class="form-group">
-        <label class="col-md-3 control-label">UPF No</label>
-        <div class="col-md-6">
-            <input type="text" class="form-control" required=""  name="upfno"  id="upfno" placeholder="EX:- 001234"/>
-        </div>
-    </div>
+		<div class="form-group">
+			<label class="col-md-3 control-label">UPF No</label>
+			<div class="col-md-6">
+				<input type="text" class="form-control" required=""  name="upfno"  id="upfno" placeholder="EX:- 001234"/>
+			</div>
+		</div>
 	
-    <div class="form-group">
-        <label class="col-md-3 control-label">NIC</label>
-        <div class="col-md-6">
-            <input type="text" class="form-control" required=""  name="nic"  id="nic"/>
-        </div>
-    </div>
+		<div class="form-group">
+			<label class="col-md-3 control-label">NIC</label>
+			<div class="col-md-6">
+				<input type="text" class="form-control" required=""  name="nic"  id="nic"/>
+			</div>
+		</div>
 	
-    <div class="form-group">
-        <label class="col-md-3 control-label">Password</label>
-        <div class="col-md-6">
-            <input type="password" class="form-control"  required="" name="pwd" id="pwd" />
-        </div>
-    </div>
+		<div class="form-group">
+			<label class="col-md-3 control-label">Password</label>
+			<div class="col-md-6">
+				<input type="password" class="form-control"  required="" name="pwd" id="pwd" />
+			</div>
+		</div>
 	
-	<div class="form-group">
-        <label class="col-md-3 control-label">Confirm Password</label>
-        <div class="col-md-6">
-            <input type="password" class="form-control"  required="" name="confrmpwd" id="confirmpwd" />
-        </div>
-    </div>
+		<div class="form-group">
+			<label class="col-md-3 control-label">Confirm Password</label>
+			<div class="col-md-6">
+				<input type="password" class="form-control"  required="" name="confrmpwd" id="confirmpwd" />
+			</div>
+		</div>
 	
-    <div class="form-group">
-                        <div class="col-sm-9 col-sm-offset-3">
-                            <div id="responsemsg"></div>
-                        </div>
-                    </div>
+		<div class="form-group">
+             <div class="col-sm-9 col-sm-offset-3">
+                  <div id="responsemsg"></div>
+             </div>
+        </div>
     <!-- #messages is where the messages are placed inside -->
     <div class="form-group">
         <div class="col-md-9 col-md-offset-3">
@@ -164,7 +154,6 @@ form {
     <div class="form-group">
         <div class="col-md-9 col-md-offset-3">
             <button type="submit" class="btn btn-primary" id="sub2" name="sub2">Register</button>
-            
         </div>
     </div>
     
@@ -203,9 +192,7 @@ $(document).ready(function() {
                             message: 'Password required'
                         }
                     }
-                }
-
-                  
+                }          
             }
         });
     });
