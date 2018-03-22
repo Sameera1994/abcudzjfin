@@ -1,25 +1,22 @@
- 
-
-<!DOCTYPE html>
-
+ <!DOCTYPE html>
 <html>
-    <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <title>Login</title>
-  <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"></script>  
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css"/>
-  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/js/bootstrapValidator.min.js"> </script>
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/formValidation.css"/>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+   <title>Login</title>
+   <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"></script>  
+   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+   <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css"/>
+   <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/js/bootstrapValidator.min.js"> </script>
+   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="css/formValidation.css"/>
 
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/formValidation.js"></script>
-    <script type="text/javascript" src="js/bootstrap.js"></script>
+   <script type="text/javascript" src="js/jquery.min.js"></script>
+   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+   <script type="text/javascript" src="js/formValidation.js"></script>
+   <script type="text/javascript" src="js/bootstrap.js"></script>
 
- <style>
+<style>
 body {
     background-image: url("images/other/stringio.jpg");
 }
@@ -87,7 +84,6 @@ form {
     <div class="form-group">
         <div class="col-md-9 col-md-offset-3">
             <button type="submit" class="btn btn-primary" id="sub1" name="sub1">Create</button>
-            
         </div>
     </div>
    
