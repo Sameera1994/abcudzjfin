@@ -318,18 +318,12 @@ include('connection.php');
 else{
 echo "</br></br></br></br></br><center><h3>No Previous applications</h3></center>";
 }
-      
-         
-          
-
    mysqli_free_result($retval);
  // echo "Fetched data successfully\n";
-
 mysqli_close($conn);      
         
  // echo "<h3 align='center'>"."Details entered successfully"."</h3>";          
             
-
 ?>            
-              </body>
+ </body>
 </html>
